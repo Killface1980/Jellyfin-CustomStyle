@@ -1,0 +1,42 @@
+.overflowBackdropCard, .overflowSmallBackdropCard {
+    width: 16vw;
+}
+.backdropImage {filter: blur(18px);}
+.backdropImage {filter: saturate(120%);}
+.backdropImage {filter: contrast(120%);}
+.backdropImage {filter: brightness(40%);}
+:root {--rounding: 6px;}
+.mainDetailButtons, .infoWrapper {    background-color: black;    border-radius: 1em;    padding: 1em; }
+.mainDetailButtons { margin-left: 1em;    margin-right: 1em;    background-color: darkred; }
+.detailSection{background-color: black; padding: 1em; border-radius: 1em;}
+.cardScalable:not(.imageEditorCard) .cardImageContainer:after {    background-size: contain; }
+.tagline { font-style: italic; }
+.headerTop { background-color: rgba(0, 0, 0, 0.75) }
+.headerTabs{ background-color: rgba(0, 0, 0, 0.5)  }
+#itemDetailPage .detailRibbon{font-size: 1.8vh;}
+.card[data-type=Person] .cardBox, .card[data-type=Actor], .card[data-type=Actor] .cardBox, .card[data-type=Actor] .cardScalable {aspect-ratio: 2/3;}
+.card[data-type=Person] .cardBox, .card[data-type=Actor], .card[data-type=Actor] .cardBox, .card[data-type=Actor] .cardScalable {    aspect-ratio: 2/3;
+    width: 7vw;
+    overflow-clip-margin: 1vw;
+    margin-right: 1vw;
+} 
+#scenesCollapsible {
+--background: rgba(0, 0, 0, 0.75);
+    --size: 10px;
+    background-image: linear-gradient(to right, var(--background) var(--size), transparent var(--size)), linear-gradient(to bottom, var(--background) var(--size), transparent var(--size)), linear-gradient(to right, var(--background) var(--size), transparent var(--size)), linear-gradient(to bottom, var(--background) var(--size), transparent var(--size)), linear-gradient(to bottom, transparent var(--size), var(--background) var(--size));
+    background-size: calc(var(--size) * 2.2) var(--size), calc(var(--size) * 2) var(--size), calc(var(--size) * 2.2) var(--size), calc(var(--size) * 2) var(--size), 100% calc(100% - var(--size) * 3);
+    background-repeat: repeat-x;
+    background-position: 0 var(--size), top left, 0 calc(100% - var(--size)), bottom left, 0 var(--size);
+    padding: calc(var(--size) * 3) calc(var(--size) * 2.5);
+    box-sizing: border-box;
+margin-top: 2em;
+padding-top: 1.2em;
+    margin-right: 2em;
+    padding-right: 1em;
+}
+#scenesCollapsible .emby-scrollbuttons {
+margin-top: 1.2em;
+}
+#scenesContent .card .cardBox, #scenesContent .card .cardBox .cardScalable{
+border-radius: 0px;
+}

@@ -1,0 +1,1015 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Limelight&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yesteryear&display=swap');
+@import url('https://fonts.cdnfonts.com/css/showtime');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700;900&display=swap');
+/*@import url("https://cdn.jsdelivr.net/npm/jellyskin@latest/dist/main.css");*/
+
+@import url("https://cdn.jsdelivr.net/npm/jellyskin@12.2.0/dist/addons/gradients/sea.css");
+
+:root {
+  --buttonSize: min(40vw, 20em);
+  --background: rgba(0, 0, 0, 0.9);
+  --size: calc(var(--buttonSize) / 44);
+  --size2: calc(var(--size) * 1.5) !important;
+  --holes: 2;
+  --accent1-light: #269dbb;
+  --accent1-dark: #234148;
+  --accent1-light-opacity1: rgba(169, 91, 194, .4);
+  --accent2-light: #0066db;
+  --accent2-dark: #002652;
+  --trsn: all 0.5s ease 0s;
+  --black: #000;
+  --background1: red;
+  --background2: green;
+  --background3: blue;
+  --background4: cyan;
+  --background5: magenta;
+  --background6: yellow;
+
+  --bg-filmstrip: linear-gradient(to bottom, var(--background) var(--size), transparent var(--size)),
+    linear-gradient(to right, var(--background) var(--size), transparent var(--size)),
+    linear-gradient(to bottom, var(--background) var(--size), transparent var(--size)),
+    linear-gradient(to right, var(--background) var(--size), transparent var(--size)),
+    linear-gradient(to bottom, var(--background) var(--size), var(--background) var(--size));
+  --bg-pos: calc(var(--size) * 0.85) 0,
+    left top,
+    calc(100% - calc(var(--size) *0.8)) 0,
+    right top,
+    calc(var(--size) * 2) 0;
+  --bg-size: var(--size2) calc(var(--size) * var(--holes)), var(--size) calc(var(--size) * 2), var(--size2) calc(var(--size) * var(--holes)), var(--size) calc(var(--size) * 2), calc(100% - var(--size) * 4) 100% !important;
+}
+
+/*
+  *, *:before, *:after {
+    position: absolute;
+  }
+*/
+/* Glow for the logo */
+.detailLogo.lazy.lazy-image-fadein-fast {
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+  display: block;
+  width: auto;
+  height: calc(5.5vh + 5.5vw);
+  max-width: min(33em, 40vw);
+}
+
+
+.layout-desktop .detailPagePrimaryContainer {
+  /* width: 57vw; */
+  /* padding-bottom: 1vh; */
+  padding-left: 27vw;
+  /* padding-right: 14vw; */
+}
+
+
+
+/* New layout for grid */
+.layout-desktop .content.focuscontainer-x {
+  white-space: break-spaces !important;
+}
+
+.layout-desktop .detailsGroupItem {
+  border-radius: 15px !important;
+  max-width: 100% !important;
+  width: auto !important;
+}
+
+.layout-desktop .detailPageContent {
+  /* padding-top: 2vh; */
+  padding-left: 27vw;
+}
+
+
+.layout-desktop .nameContainer {
+  /* margin-top: -7.5vh !important; */
+  padding-bottom: 0.6em;
+  /* width: 39vw; */
+  align-items: baseline;
+  /* justify-content: center; */
+  flex-direction: row;
+  /* word-wrap: break-word; */
+  /* white-space: break-spaces; */
+}
+
+
+
+
+/* Font stuff */
+html {
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+#itemDetailPage>div.detailPageWrapperContainer.padded-bottom-page>div.detailPagePrimaryContainer.padded-left.padded-right.detailRibbon>div.infoWrapper>div.nameContainer>h1 {
+  /* font-size: 1.2em !important; */
+  /* letter-spacing: 0.015em; */
+  /* padding-right: 0.6em; */
+  /* font-family: 'Fira Sans Extra Condensed'; */
+  /* font-family: 'Showtime'; */
+  font-size: max(1.7em, 2vw);
+  padding-top: 0.2em;
+  /* font-weight: 100; */
+  padding-bottom: 0.2em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-family: 'Limelight';
+  line-height: 1;
+  font-size: 2.2em;
+  padding-right: 0.6em;
+}
+
+h2 {
+  font-weight: 200;
+  letter-spacing: 0.06em;
+  font-family: 'Bangers';
+  font-size: 2.1em;
+  /* background-color: var(--accent1-light-opacity1); */
+}
+
+h4.itemName.infoText.originalTitle {
+  /* font-variant-caps: all-petite-caps; */
+  /* font-weight: 300; */
+  /* letter-spacing: 0.1em; */
+  /* padding-left: 3vw; */
+  padding-top: 1vw;
+}
+
+.tagline {
+  /* font-style: italic; */
+  /* font-family: monospace; */
+  /* font-size: 1.6em; */
+  line-height: 1.3;
+  font-family: 'Bangers';
+  font-family: 'Special Elite', monospace;
+  max-width: 40ch;
+}
+
+.backgroundContainer.withBackdrop {
+  background-color: rgba(0, 0, 0, 0.11);
+}
+
+
+
+/*16x9 Show Episode Image (on Season Page */
+.listItemImage-large {
+  height: 9vw;
+  width: 16vw;
+  border-radius: 15px !important;
+}
+
+.listItemImage-large-tv {
+  height: 16vw !important;
+  width: 30vw !important;
+}
+
+
+
+/* Film strip view */
+#scenesCollapsible .emby-scroller {
+  padding-bottom: calc(var(--size) * 2);
+  padding-top: calc(var(--size) * 2);
+}
+
+/* Film strip titling with Typewriter font */
+#scenesContent>button>div>div>div.innerCardFooter {
+  display: flex;
+  font-size: 0.8em;
+  letter-spacing: 0em;
+  /* left: 50%; */
+  font-family: 'Special Elite', monospace;
+  letter-spacing: 0.2em;
+  /* display: flex; */
+  justify-content: space-between;
+  flex-direction: row;
+  /* height: 100% !important; */
+  width: 100% !important;
+  /* left: -2vw; */
+  /* z-index: 100; */
+  /* max-width: 20vw; */
+  background: transparent;
+  border-radius: 0px !important;
+  bottom: 0% !important;
+  margin: 0 !important;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  border-radius: 0px !important;
+}
+
+.chapterThumbContainer {
+  --holes: 2;
+  background-image: var(--bg-filmstrip) !important;
+  background-size: var(--bg-size) !important;
+  background-repeat: repeat-y;
+  background-position: var(--bg-pos) !important;
+  padding: 0 calc(var(--size) * 4);
+  box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+  /* padding-bottom: 1vw; */
+  /* max-height: 39vh; */
+  /* display: table; */
+  /* max-width: 100%; */
+  /* margin: 5vh; */
+  /* height: 20vw; */
+}
+
+.chapterThumbTextContainer {
+  font-size: 0.8em;
+  letter-spacing: 0em;
+  /* left: 50%; */
+  font-family: Courier New, MONOSPACE;
+  align-content: space-between;
+  text-align: center;
+  /* background-color: transparent; */
+  /* left: -2vw; */
+  /* z-index: 100; */
+  /* max-width: 20vw; */
+  /* width: 100% !important; */
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  height: min-content;
+  align-items: center;
+  align-content: center;
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+
+
+
+/*pan the background for backdrops*/
+/*
+.backdropImage {
+  background-size: 120% 120%;
+  opacity: 0;
+  background-position: 50% 50%;
+  animation: backgroundScroll 40s ease-in-out 2s;
+}*/
+.backdropImage {
+  filter: blur(8px) saturate(1.2) brightness(0.5);
+}
+
+/*
+@media (max-width: 600px) {
+  .backdropImage {
+    background-size: 150% 150% cover;
+    opacity: 0;
+    background-position: 99% 1%;
+    animation: backgroundScrollmob 60s ease-in-out 1s;
+  }
+}
+*/
+/* Fade In Out effect for film strip */
+#scenesContent>button>div {
+  /* margin: 0.4vh; */
+  filter: saturate(0.7) brightness(0.7);
+  transition: 1s ease;
+  /* width: 14vw; */
+  margin-left: 0.1vw;
+  margin-right: 0.1vw;
+  /* aspect-ratio: 21/9; */
+  width: auto;
+  /* aspect-ratio: 2/1; */
+  /* height: auto; */
+  /* margin-right: 150px; */
+}
+
+/* --- LAYER #3-1 -- Flickering */
+#scenesContent>button:hover>div,
+#items>div>div.itemsContainer.vertical-wrap.lazy.padded-left.padded-right>div>div>div.cardScalable:hover,
+#recentlyAddedItems>div>div>div.cardScalable:hover,
+#resumableItems>div>div>div.cardScalable:hover,
+#moviesTab>div.itemsContainer>div>div>div.cardScalable:hover {
+  /*filter: saturate(1.2) brightness(1.4);*/
+  transition: 5s ease;
+  animation: flicker 0.6s steps(1) infinite;
+}
+
+#scenesContent>button:hover {
+  transition: 0.5s ease;
+  scale: 1.12;
+  /* transform: rotate(-90deg)  translateY(calc(-0.2 * var(--buttonSize))); */
+  z-index: 99;
+  -webkit-filter: drop-shadow(0px 0px 0.5vh rgba(255, 255, 255, 0.7));
+  filter: drop-shadow(0px 0px 1vh rgba(255, 255, 255, 0.7));
+}
+
+
+/*
+#scenesContent>button:active {
+  transition: 0.5s ease;
+  scale: 2;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg)  translateY(-45%);
+  z-index: 99;
+  -webkit-filter: drop-shadow(0px 0px 0.5vh rgba(255, 255, 255, 0.7));
+  filter: drop-shadow(0px 0px 0.5vh rgba(255, 255, 255, 0.7));
+}
+*/
+
+/* Black bg for film strip chapter text */
+.innerCardFooter>.cardText {
+  background: rgba(0, 0, 0, .7);
+  /* overflow: visible; */
+  /* height: 100%; */
+  white-space: break-spaces;
+  /* width: fit-content; */
+  /* text-align: center; */
+}
+
+
+#seriesScheduleList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, .4);
+  /* stroke-width: 1px; */
+}
+
+
+#seriesScheduleList>div:nth-child(odd) {
+  background-color: rgba(40, 40, 40, .7);
+}
+
+#seriesScheduleList>div:nth-child(even) {
+  background-color: rgba(0, 0, 0, .5)
+}
+
+.detailPageContent {
+  grid-template-columns: 69vw;
+  grid-template-areas:
+    'details1'
+    'strip'
+    'showsinfo'
+    'showsseason'
+    'details2'
+    'seriesSchedule'
+    'cast'
+    'similar';
+  display: grid;
+}
+
+@media (max-width: 43.75em) {
+  .layout-desktop .detailPageContent {
+    /* padding-top: 2vh; */
+    padding-left: 3vw;
+    grid-template-columns: 94vw;
+  }
+}
+
+@media (max-width: 70em) {
+  #itemDetailPage>div.detailPageWrapperContainer.padded-bottom-page>div.detailPagePrimaryContainer.padded-left.padded-right.detailRibbon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  div#itemBackdrop {
+    background-size: 100%;
+    background-position: 0 5vh;
+  }
+
+  #scenesContent>button:nth-child(odd):hover {
+    transform: translateX(3.5vh);
+  }
+
+  #scenesContent>button:nth-child(even):hover {
+    transform: translateX(-3.5vh);
+  }
+
+
+
+  /*
+  button.card.itemAction.chapterCard.overflowBackdropCard:hover {
+    transform: rotate(0deg);
+    transition: 0.5s ease;
+    transform-origin: center;
+    width: calc(var(--buttonSize) * 1.2);
+    margin-left: calc(var(--buttonSize) / 8);
+    margin-right: calc(var(--buttonSize) / 5);
+  }
+  */
+}
+
+@media (min-width: 70em) {
+  .detailPageContent {
+    grid-template-columns: 42vw 2vw 33vh;
+    grid-template-areas:
+      'details1 . strip '
+      'showsinfo showsinfo . '
+      'showsseason showsseason . '
+      'details2 details2 details2'
+      'seriesSchedule seriesSchedule seriesSchedule '
+      'cast cast cast '
+      'similar similar similar';
+    display: grid;
+    /* gap: 1vw; */
+  }
+
+  #scenesCollapsible .emby-scroller {
+    transform: rotate(90deg) translateY(-80%);
+    transform-origin: top left;
+    width: calc(var(--buttonSize) * 4 * 0.5);
+    padding-top: calc(var(--buttonSize) * 0.35);
+    padding-bottom: calc(var(--buttonSize) * 0.35);
+    /* padding-left: calc(1.7 * var(--size)); */
+    /* padding-right: calc(1.7 * var(--size)); */
+    /* padding-right: 0px; */
+    /* margin-bottom: 100px; */
+  }
+
+  div#scenesCollapsible {
+    min-height: calc(var(--buttonSize) * 4 * 0.4975 + 2vw);
+  }
+
+  button.card.itemAction.chapterCard.overflowBackdropCard {
+    transform: rotate(-90deg) translateY(-50%);
+    /* margin-right: calc(var(--buttonSize) * -0.51); */
+    margin-top: calc(var(--size) * 4);
+    margin-bottom: calc(var(--size) * 4);
+    margin-right: calc(-0.5 * var(--buttonSize));
+    /* margin-left: 0px; */
+    /* margin-right: calc(-0.47 * var(--buttonSize)); */
+  }
+
+  #scenesContent>button>div {
+    /* margin-top: 0vh; */
+    margin-bottom: 0vh;
+  }
+
+
+  #scenesContent>button:nth-child(1):hover,
+  #scenesContent>button:nth-child(4n+5):hover {
+    transform: rotate(-90deg) translateY(-25%);
+  }
+
+  #scenesContent>button:nth-child(4n+4):hover,
+  #scenesContent>button:nth-last-child(1):hover {
+    transform: rotate(-90deg) translateY(calc(-0.33 * var(--buttonSize)));
+  }
+
+
+}
+
+#scenesContent>button>div>div>div.innerCardFooter {
+  /* transform: rotate(180deg); */
+  font-family: 'Special Elite', monospace;
+  /* writing-mode: vertical-rl; */
+  flex-direction: column;
+  height: 100% !important;
+}
+
+.verticalSection.detailVerticalSection.moreFromSeasonSection.emby-scroller-container {
+  grid-area: details2;
+}
+
+.collectionItems {
+  grid-area: details2;
+}
+
+div#castCollapsible {
+  grid-area: cast;
+}
+
+div#similarCollapsible {
+  grid-area: similar;
+}
+
+.detailSection .detailSectionContent {
+  /* max-width: 44em; */
+  grid-area: details1;
+  /*max-width: 47em;*/
+
+}
+
+#nextUpSection {
+  grid-area: strip;
+}
+
+/*#specialsCollapsible,*/
+#seriesScheduleSection {
+  grid-area: seriesSchedule;
+}
+
+div#childrenCollapsible {
+  grid-area: details2;
+}
+
+.nextUpSection.verticalSection.detailVerticalSection {
+  grid-area: strip;
+}
+
+div#scenesCollapsible {
+  grid-area: strip;
+  /* min-height: calc(var(--buttonSize) * 4 * 0.5 + 6vh); */
+  /* height: 640px; */
+}
+
+
+
+
+h1.itemName.infoText.parentNameLast.withOriginalTitle {
+  font-family: 'Limelight';
+  font-size: 2.8em;
+  margin-bottom: -0.3em;
+
+}
+
+#itemDetailPage>div.detailPageWrapperContainer.padded-bottom-page>div.detailPagePrimaryContainer.padded-left.padded-right.detailRibbon>div.infoWrapper>div.detailImageContainer.padded-left>div>div>div {
+  width: 20vw;
+  animation: none;
+}
+
+
+
+.label {
+  /* font-weight: 700; */
+  font-family: 'Limelight';
+}
+
+
+#homeTab>div>div.section4>div.verticalSection.emby-scroller-container>div.padded-top-focusscale.padded-bottom-focusscale.emby-scroller>div>div>div>div.cardText.cardTextCentered.cardText-first,
+#similarCollapsible>div.padded-top-focusscale.padded-bottom-focusscale.emby-scroller>div>div>div>div.cardText.cardTextCentered.cardText-first>button,
+#seriesTab>div>div>div>div.cardFooter>div.cardText.cardTextCentered.cardText-first>button {
+  /* font-family: 'Limelight'; */
+  white-space: break-spaces;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  /* font-size: 0.7em; */
+  /* text-align: left; */
+}
+
+
+
+#seriesTab>div>div>div>div.cardFooter>div.cardText.cardTextCentered.cardText-secondary {
+  font-family: 'Bangers';
+  font-size: 0.9em;
+  width: 6em;
+  white-space: break-spaces;
+  line-height: 1.1;
+  text-align: right;
+  width: max-content;
+  overflow: initial;
+
+}
+
+.infoWrapper {
+  /* width: 150px !important; */
+  display: flex;
+  /* margin-bottom: -13px; */
+  /* white-space: break-spaces; */
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: space-between;
+}
+
+.emby-button-foreground {
+  font-family: 'Limelight';
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+}
+
+.skinHeader-withBackground,
+.skinHeader.semiTransparent {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px) brightness(0.8) saturate(0.5) !important;
+}
+
+.detailLogo {
+  left: 27vw;
+  right: 3vw;
+  background-position: 0%;
+}
+
+.itemName {
+  white-space: break-spaces;
+  font-weight: 400;
+}
+
+.layout-desktop .detailRibbon {
+  height: fit-content;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  width: 67vw;
+  /* display: grid; */
+  /* grid-auto-columns: auto; */
+  /* background-image: linear-gradient(90deg, var(--accent1-light), var(--accent1-dark)); */
+}
+
+
+
+
+
+
+
+#castContent>div>div>div.cardText.cardTextCentered.cardText-first>button {
+  font-family: 'Satisfy';
+  white-space: break-spaces;
+  font-size: 1.4em;
+  margin-top: 0.2em;
+  min-height: 2.2em;
+  margin-bottom: 0.1em;
+  line-height: 1;
+}
+
+/* --- LAYER #1 -- Film Strip with padding */
+/*#homeTab > div > div.verticalSection.section1.emby-scroller-container > div.padded-top-focusscale.padded-bottom-focusscale.emby-scroller > div > div:hover,
+#homeTab > div > div.section6 > div > div.padded-top-focusscale.padded-bottom-focusscale.emby-scroller > div > div:hover, 
+#collectionsTab > div.itemsContainer.vertical-wrap.centered.padded-left.padded-right > div:hover, 
+#suggestionsTab > div.recommendations > div > div > div:hover, #recentlyAddedItems > div:hover, */
+#items>div>div.itemsContainer.vertical-wrap.lazy.padded-left.padded-right>div:hover,
+#recentlyAddedItems>div:hover,
+#resumableItems>div:hover,
+#moviesTab>div.itemsContainer>div:hover {
+  transform: translateY(5%);
+  background-image: var(--bg-filmstrip) !important;
+  background-size: var(--size2) calc(var(--size) * var(--holes)), var(--size) calc(var(--size) * 2), var(--size2) calc(var(--size) * var(--holes)), var(--size) calc(var(--size) * 2), calc(100% - var(--size) * 6) 100% !important;
+  background-repeat: repeat-y !important;
+  background-position: calc(var(--size) * 0.85) 0, left top, calc(100% - calc(var(--size) *2.8)) 0, calc(100% - 2 * var(--size)) top, calc(var(--size) * 2) 0 !important;
+  /* padding: 0 calc(var(--size) * 1.5) 0 calc(var(--size) * 1.5 + 1.2em); */
+  -webkit-filter: drop-shadow(0px 0px 0.5vh rgba(255, 255, 255, 0.7));
+  filter: drop-shadow(0px 0px 0.5vh rgba(255, 255, 255, 0.7));
+  /* box-sizing: border-box; */
+  /* aspect-ratio: 21/9; */
+  /* height: auto; */
+  z-index: 999;
+  /* scale: 1.25; */
+  /* transform: translateY(0px); */
+  height: max-content;
+  max-height: 100%;
+  /* white-space: break-spaces !important; */
+  scale: 1.1;
+  /* transform-origin: center; */
+}
+
+button.card.itemAction.chapterCard.overflowBackdropCard {
+  /* width: calc(var(--buttonSize) - 0vh); */
+  width: 50%;
+  transition: 0.5s ease;
+  background-image: var(--bg-filmstrip) !important;
+  background-size: var(--bg-size) !important;
+  background-repeat: repeat-y !important;
+  background-position: var(--bg-pos) !important;
+  padding: 0 calc(var(--size) * 3);
+}
+
+#castContent>div>div>div.cardText.cardTextCentered.cardText-secondary {
+  white-space: break-spaces;
+  line-height: 1.3;
+}
+
+#seriesTab>div>div>div>div.cardFooter {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 100em) {
+
+  .portraitCard,
+  .squareCard {
+    width: 14.285%;
+  }
+}
+
+p.overview.detail-clamp-text {
+  max-width: 80ch;
+  -webkit-line-clamp: 7;
+}
+
+.mainDrawer.transition.touch-menu-la.drawer-open {
+  background-color: rgba(35, 35, 35, 0.7) !important;
+  /* border-radius: 50px !important; */
+  backdrop-filter: blur(10px) !important;
+}
+
+button.alphaPickerButton.alphaPickerButton-vertical {
+  font-family: 'Bangers';
+  font-size: 1.2em;
+  transition: ease 0.5s;
+
+}
+
+button.alphaPickerButton.alphaPickerButton-vertical:hover {
+  background-color: antiquewhite;
+  color: burlywood;
+  scale: 1.3;
+}
+
+button.alphaPickerButton.alphaPickerButton-vertical.alphaPickerButton-selected {
+  background-color: blueviolet;
+  scale: 1.3;
+  transition: ease 0.5s;
+
+}
+
+button.alphaPickerButton.alphaPickerButton-vertical.alphaPickerButton-selected:hover {
+  background-color: grey;
+  color: antiquewhite;
+}
+
+/*
+OLD FILM EFFECT
+
+<div class="content">
+	<div class='film'> <-- image
+		<div class="effect">
+			<div class="grain"></div>
+
+*, *:before, *:after {
+	position: absolute;
+}
+
+      */
+
+/* --- LAYER #3-3 -- Blur */
+#scenesContent>button>div>div>div.innerCardFooter,
+#items>div>div.itemsContainer.vertical-wrap.lazy.padded-left.padded-right>div:hover>div>div.cardScalable>div.cardOverlayContainer.itemAction,
+#recentlyAddedItems>div:hover>div>div.cardScalable>div.cardOverlayContainer.itemAction,
+#resumableItems>div:hover>div>div.cardScalable>div.cardOverlayContainer.itemAction,
+#moviesTab>div.itemsContainer>div:hover>div>div.cardScalable>div.cardOverlayContainer.itemAction,
+.film,
+.effect {
+  width: 100%;
+  height: 100%;
+  filter: blur(0.45px) drop-shadow(0px 0px 0px #fff1);
+  background: transparent;
+}
+
+/* --- LAYER #3-4 -- Film Scratch */
+#scenesContent>button:hover>div>div>div.innerCardFooter:after,
+#items>div>div.itemsContainer.vertical-wrap.lazy.padded-left.padded-right>div>div>div.cardScalable>div.cardOverlayContainer.itemAction:hover::after,
+#recentlyAddedItems>div>div>div.cardScalable>div.cardOverlayContainer.itemAction:hover::after,
+#resumableItems>div>div>div.cardScalable>div.cardOverlayContainer.itemAction:hover::after,
+#moviesTab>div.itemsContainer>div>div>div.cardScalable>div.cardOverlayContainer.itemAction:hover::after,
+.film:after,
+.effect:after {
+  position: absolute;
+  content: '';
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 100px;
+  opacity: 0.5;
+  animation: film-scratch 0.45s steps(1) infinite;
+  background: repeating-linear-gradient(90deg, #0002 0 2px, transparent 4px 37vmin);
+}
+
+#scenesContent>button:hover>div>div>div.innerCardFooter:after, #items>div>div.itemsContainer.vertical-wrap.lazy.padded-left.padded-right>div>div>div.cardScalable:hover:after, #recentlyAddedItems>div>div>div.cardScalable:hover:after, #resumableItems>div>div>div.cardScalable:hover:after, #moviesTab>div.itemsContainer>div>div>div.cardScalable:hover:after
+{
+  position: absolute;
+  left: 30%;
+  animation: effect-scratch 2s infinite;
+}
+
+.grain {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- LAYER #3-2 -- Grain */
+#scenesContent>button:hover>div>div>div.innerCardFooter:before, #items>div>div.itemsContainer.vertical-wrap.lazy.padded-left.padded-right>div>div>div.cardScalable>div.cardOverlayContainer.itemAction:hover::before, #recentlyAddedItems>div>div>div.cardScalable>div.cardOverlayContainer.itemAction:hover::before, #resumableItems>div>div>div.cardScalable>div.cardOverlayContainer.itemAction:hover::before, #moviesTab>div.itemsContainer>div>div>div.cardScalable>div.cardOverlayContainer.itemAction:hover::before, .grain:after {
+  position: absolute;
+  content: '';
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  opacity: .25;
+  background-image:
+    repeating-conic-gradient(var(--black) 0%, transparent .00003%, transparent .0005%, transparent .00095%),
+    repeating-conic-gradient(var(--black) 0%, transparent .00005%, transparent 0.00015%, transparent 0.0009%);
+  animation: grain 0.5s steps(1) infinite;
+  filter: drop-shadow(0px 0px 1px black);
+}
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    filter: saturate(1) brightness(1);
+
+  }
+
+  25% {
+    filter: saturate(1.1) brightness(1.1);
+  }
+
+  50% {
+    filter: saturate(1) brightness(1);
+  }
+
+  75% {
+    filter: saturate(1.1) brightness(1.1);
+  }
+
+}
+
+@keyframes grain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-1%, -1%);
+  }
+
+  20% {
+    transform: translate(1%, 1%);
+  }
+
+  30% {
+    transform: translate(-2%, -2%);
+  }
+
+  40% {
+    transform: translate(3%, 3%);
+  }
+
+  50% {
+    transform: translate(-3%, -3%);
+  }
+
+  60% {
+    transform: translate(4%, 4%);
+  }
+
+  70% {
+    transform: translate(-4%, -4%);
+  }
+
+  80% {
+    transform: translate(2%, 2%);
+  }
+
+  90% {
+    transform: translate(-3%, -3%);
+  }
+}
+
+@keyframes film-scratch {
+
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+
+  10% {
+    transform: translateX(-1%);
+  }
+
+  20% {
+    transform: translateX(1%);
+  }
+
+  30% {
+    transform: translateX(-2%);
+    opacity: 0.75;
+  }
+
+  40% {
+    transform: translateX(3%);
+  }
+
+  50% {
+    transform: translateX(-3%);
+    opacity: 0.5;
+  }
+
+  60% {
+    transform: translateX(8%);
+  }
+
+  70% {
+    transform: translateX(-3%);
+  }
+
+  80% {
+    transform: translateX(10%);
+    opacity: 0.25;
+  }
+
+  90% {
+    transform: translateX(-2%);
+  }
+}
+
+@keyframes effect-scratch {
+  0% {
+    transform: translateX(0);
+    opacity: 0.75;
+  }
+
+  10% {
+    transform: translateX(-1%);
+  }
+
+  20% {
+    transform: translateX(1%);
+  }
+
+  30% {
+    transform: translateX(-2%);
+  }
+
+  40% {
+    transform: translateX(3%);
+  }
+
+  50% {
+    transform: translateX(-3%);
+    opacity: 0.5;
+  }
+
+  60% {
+    transform: translateX(8%);
+  }
+
+  70% {
+    transform: translateX(-3%);
+  }
+
+  80% {
+    transform: translateX(10%);
+    opacity: 0.25;
+  }
+
+  90% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(30%);
+  }
+}
+
+/**** OLD FILM EFFECT END ****/
+
+#scenesCollapsible>h2 {
+  padding-top: 0;
+}
+
+
+
+.cardOverlayButton-br.flex {
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+/* --- LAYER #2 -- Align margins */
+/* Grid for hover state to re-align the caption */
+/* #homeTab>div>div.verticalSection.section1.emby-scroller-container>div.padded-top-focusscale.padded-bottom-focusscale.emby-scroller>div>div:hover>div,
+#homeTab>div>div.section6>div>div.padded-top-focusscale.padded-bottom-focusscale.emby-scroller>div>div:hover>div,
+/*#collectionsTab > div.itemsContainer.vertical-wrap.centered.padded-left.padded-right > div:hover > div,*/
+/*#suggestionsTab>div.recommendations>div>div>div:hover>div,*/
+#items>div>div.itemsContainer.vertical-wrap.lazy.padded-left.padded-right>div:hover>div,
+#recentlyAddedItems>div:hover>div,
+#resumableItems>div:hover>div,
+#moviesTab>div.itemsContainer>div:hover>div
+{
+  margin-left: calc(3 * var(--size));
+  margin-right: calc(5 * var(--size));
+  display: grid;
+  margin-bottom: 0 !important;
+}
+
+#moviesTab>div.itemsContainer>div:hover>div>div.cardFooter>div {
+  white-space: break-spaces;
+}
+
+#items>div>div.itemsContainer.vertical-wrap.lazy.padded-left.padded-right>div:hover > div > div.cardFooter > div.cardText.cardTextCentered.cardText-first,
+#recentlyAddedItems>div:hover > div > div.cardFooter > div.cardText.cardTextCentered.cardText-first,
+#resumableItems>div:hover > div > div.cardFooter > div.cardText.cardTextCentered.cardText-first,
+#moviesTab>div.itemsContainer>div:hover > div > div.cardFooter > div.cardText.cardTextCentered.cardText-first
+{
+  font-size: 1em;
+  font-family: 'Limelight';
+  white-space: break-spaces;
+  /* margin-bottom: 0.1em; */
+}
+
+#items>div>div.itemsContainer.vertical-wrap.lazy.padded-left.padded-right>div:hover > div > div.cardFooter > div.cardText.cardTextCentered.cardText-secondary,
+#recentlyAddedItems>div:hover > div > div.cardFooter > div.cardText.cardTextCentered.cardText-secondary,
+#resumableItems>div:hover > div > div.cardFooter > div.cardText.cardTextCentered.cardText-secondary,
+#moviesTab>div.itemsContainer>div:hover > div > div.cardFooter > div.cardText.cardTextCentered.cardText-secondary 
+{
+  font-family: 'Bangers';
+  /* font-size: 1.1em; */
+  margin-top: 0em;
+}
